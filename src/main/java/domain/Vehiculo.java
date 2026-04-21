@@ -1,6 +1,6 @@
 package domain;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo extends Marca{
     protected String patente;
     protected String marca;
     protected String modelo;
@@ -9,7 +9,8 @@ public abstract class Vehiculo {
     protected Sucursal sucursal;
     private VehiculoTipo tipo;
 
-    public Vehiculo(VehiculoTipo tipo, String patente, String marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal) {
+    public Vehiculo(String pais, VehiculoTipo tipo, String patente, String marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal) {
+        super(marca, pais);
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;

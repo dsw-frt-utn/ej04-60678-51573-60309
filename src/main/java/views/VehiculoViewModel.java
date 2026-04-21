@@ -12,9 +12,11 @@ public class VehiculoViewModel {
     private int anio;
     private double litrosExtra;
     private double kmARecorrer;
+    private String pais;
     
     public VehiculoViewModel(Vehiculo vehiculo){
         if(vehiculo == null)return;
+        pais = vehiculo.getPais();
         patente = vehiculo.getPatente();
         this.vehiculo = vehiculo.toString();
         tipo = vehiculo.getTipo().name();
@@ -26,6 +28,10 @@ public class VehiculoViewModel {
         kmARecorrer = 100;
     }
 
+    public String getPais(){
+        return pais;
+    }
+    
     public String getPatente() {
         return patente;
     }
